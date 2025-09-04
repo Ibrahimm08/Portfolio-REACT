@@ -1,0 +1,14 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    width: 100%;
+    background-color: #06d6a0;
+}
+
+.icons-footer {
+    margin-right: 20px;
+    margin-left: 100px;
+    border-right: solid white 3px;
+    width: 10%;
+}

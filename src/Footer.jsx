@@ -1,10 +1,12 @@
+import "./Footer.css";
+
 const Footer = () => {
   return (
     <footer>
-      <div>
+      <div className="icons-footer">
         <p>{/*Icons such as github and linkedin will go here*/}</p>
       </div>
-      <div>
+      <div className="info-footer">
         <ul>
           {/*Contact info and name will go here*/}
           <p>
