@@ -1,6 +1,8 @@
+import '../styles/Greeting.css'
+
 const Greeting = () => {
   return (
-    <>
+    <div className='greeting-container'>
       <div className="greeting-bg"></div>
       <div className="envalope">
         <div className="envalope-design-back"></div>
@@ -14,7 +16,7 @@ const Greeting = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
