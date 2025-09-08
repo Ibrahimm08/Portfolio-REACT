@@ -1,4 +1,5 @@
 import "../styles/Greeting.css";
+import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai";
 
 const Greeting = () => {
   return (
@@ -9,15 +10,31 @@ const Greeting = () => {
         <div className="envalope-design-mid"></div>
         <div className="envalope-design-front">
           <div className="title">
-            <img src="" alt="" />
-            <h1>Hello, I am Ibrahim Maqsood <br /> 
-              I am studying <span>Software Development</span> 
+            <div className="image">
+              <img src="" alt="" />
+              <div className="line" />
+            </div>
+            <h1>
+              Hello, I am Ibrahim Maqsood <br />I am studying{" "}
+              <span>Software Development</span>
             </h1>
           </div>
-          <div className="description"></div>
-          <div className="greeting-btns">
-            <button>About Me</button>
-            <button>Contact Me</button>
+          <div className="description">
+            <div className="separator"></div>
+            <p>
+              I'm Ibrahim, a student at Middlesbrough College where I am
+              currently studying my 2nd year of my T-Level in Digital
+              Production, Development, and Design. As apart of my course I am a
+              Junior Software Assistant at BigBite.
+            </p>
+            <div className="socials">
+              <a href="https://github.com/Ibrahimm08">
+                <AiOutlineGithub />
+              </a>
+              <a href="https://www.linkedin.com/in/ibrahimmaqsood/">
+                <AiOutlineLinkedin />
+              </a>
+            </div>
           </div>
         </div>
       </div>

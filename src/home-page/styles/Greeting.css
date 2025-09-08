@@ -44,7 +44,7 @@
     flex-direction: column;
     height: 100%;
     width: 100%;
-    clip-path: polygon(100% 0, 100% 100%, 0% 100%, 0 10%, 70% 10%, 80% 0);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 10%, 70% 10%, 80% 0);
     padding-left: 100px;
     background-color: var(--color2);
 }
@@ -69,6 +69,12 @@
     text-decoration: underline;
 }
 
+.title .image {
+    position: relative;
+    width: 220px;
+    height: 220px;
+}
+
 .title img {
     /* Bg color temporary until i find a image */
     background-color: gray;
@@ -76,4 +82,68 @@
     width: 220px;
     height: 220px;
     clip-path: circle();
+}
+
+.line {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    scale: 2.5;
+    top: 32%;
+    left: 27%;
+    background-color: transparent;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='100' ry='100' stroke='%23C2A051FF' stroke-width='3' stroke-dasharray='50%25%2c 13%25' stroke-dashoffset='86' stroke-linecap='butt'/%3e%3c/svg%3e");
+    border-radius: 100px;
+    animation: rotate-line 10s linear infinite;
+}
+
+@keyframes rotate-line {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+.separator {
+    width: 200px;
+    height: 3px;
+    background-color: #c2a051;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    width: 750px;
+    margin-top: 40px;
+    margin-left: 100px;
+}
+
+.socials {
+    display: flex;
+    gap: 40px;
+    font-size: 44px;
+}
+
+.socials a {
+    position: relative;
+    all: unset;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+.socials :nth-last-child(2):hover {
+    color: rgb(255, 255, 255);
+}
+
+.socials :nth-child(2):hover {
+    color: var(--color4);
 }
