@@ -3,7 +3,7 @@
     position: absolute;
     justify-self: center;
     align-items: center;
-    background-color: #06d6a0;
+    background-color: var(--color3);
     margin-top: 20px;
     width: 90%;
     height: 40px;
@@ -42,7 +42,7 @@
 .navbar ul a::before {
     content: attr(data-text);
     font-weight: 780;
-    color: #EF476F;
+    color: var(--color1);
     text-decoration: underline 2px;
     overflow: hidden;
     position: absolute;
