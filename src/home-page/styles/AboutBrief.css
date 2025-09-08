@@ -1,0 +1,76 @@
+.about.container {
+    height: 2048px;
+    background: linear-gradient(white, var(--color5) 15%);
+}
+
+.about-content {
+    position: absolute;
+    margin-top: 500px;
+    height: 800px;
+    width: 1100px;
+    justify-self: center;
+    animation: showmain linear both;
+    animation-timeline: view();
+    animation-range: 0 50%;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.display {
+    position: absolute;
+    height: 800px;
+    width: 1100px;
+    background-color: var(--color4);
+    rotate: 0.5turn;
+    z-index: 0;
+    --r: 20px;
+    --s: 140px;
+    border-radius: var(--r);
+    clip-path: shape(from 0 0,
+            hline to calc(100% - var(--s) - 2*var(--r)),
+            curve by var(--r) var(--r) with var(--r) 0,
+            curve by var(--s) var(--s) with 0 var(--s),
+            curve by var(--r) var(--r) with var(--r) 0,
+            vline to 100%,
+            hline to 0);
+}
+
+@keyframes showmain {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.8s cubic-bezier(0.22, 0.44, 0, 1);
+}
+
+.content.active {
+    transform: translateY(0);
+    z-index: 2;
+}
+
+.content.up-scroll {
+    transform: translateY(-100%);
+    z-index: 1;
+}
+
+.content.down-scroll {
+    transform: translateY(100%);
+    z-index: 1;
+}
+
+/* Make background change depending on content shown optional */

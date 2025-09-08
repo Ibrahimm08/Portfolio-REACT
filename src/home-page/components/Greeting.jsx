@@ -3,7 +3,7 @@ import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai";
 
 const Greeting = () => {
   return (
-    <div className="greeting-container">
+    <div className="greeting container">
       <div className="greeting-bg"></div>
       <div className="envalope">
         <div className="envalope-design-back"></div>
@@ -15,7 +15,7 @@ const Greeting = () => {
               <div className="line" />
             </div>
             <h1>
-              Hello, I am Ibrahim Maqsood <br />I am studying{" "}
+              Hello, I am Ibrahim Maqsood <br />I'm pursuing a career{" "}
               <span>Software Development</span>
             </h1>
           </div>

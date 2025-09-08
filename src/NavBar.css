@@ -1,14 +1,27 @@
 .navbar {
     display: flex;
-    position: absolute;
+    position: sticky;
     justify-self: center;
     align-items: center;
     background-color: var(--color3);
     margin-top: 20px;
+    margin-bottom: -80px;
     width: 90%;
     height: 40px;
+    top: 2px;
     padding: .5rem;
     z-index: 10;
+    animation: changeBg linear;
+    animation-timeline: scroll();
+    animation-range: 0% 100%;
+}
+
+@keyframes changeBg {
+
+    20%,
+    100% {
+        background-color: rgba(0, 0, 0, 0.439);
+    }
 }
 
 .navbar ul {
@@ -36,8 +49,17 @@
     font-weight: bold;
     font-size: large;
     width: min-content;
+    animation: changeTxt linear;
+    animation-timeline: scroll();
+    animation-range: 0 100%;
 }
 
+@keyframes changeTxt {
+    20%,100%{
+        color: rgba(255, 255, 255, 0.466);
+    }
+    
+}
 
 .navbar ul a::before {
     content: attr(data-text);
