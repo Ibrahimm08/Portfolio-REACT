@@ -1,26 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "../styles/AboutBrief.css";
-
-const slides = [
-  {
-    id: "a",
-    heading: "Content A",
-    text: "Content content",
-    img: "",
-  },
-  {
-    id: "b",
-    heading: "Content B",
-    text: "More content",
-    img: "https://www.bing.com/th/id/OIP.YZe8XEROfuOjqPf0JsrC8wHaEK?w=275&h=211&c=8&rs=1&qlt=70&o=7&cb=thws4&pid=3.1&rm=3&ucfimg=1",  // image for testing purposes not final
-  },
-  {
-    id: "c",
-    heading: "Content C",
-    text: "More more more content",
-    img: "",
-  },
-];
+import slides from "./Slides.js";
 
 const AboutBrief = () => {
   const [current, setCurrent] = useState(0);
@@ -36,7 +16,7 @@ const AboutBrief = () => {
         setInView(entry.isIntersecting);
         if (entry.isIntersecting) {
           entry.target.scrollIntoView({
-            behavior: "auto",
+            behavior: "smooth",
             block: "center",
           });
         }
@@ -103,13 +83,35 @@ const AboutBrief = () => {
           let classEdit = "content";
           if (index < current) classEdit += " up-scroll";
           if (index > current) classEdit += " down-scroll";
-          if (index === current) classEdit += " active";
+          if (index === current) classEdit += " active" + ` ${slide.id}`;
 
           return (
             <div key={slide.id} className={classEdit}>
-              <div>
+              <div className="content-styling">
                 <h1>{slide.heading}</h1>
                 <p>{slide.text}</p>
+                {slide.headingb && (
+                  <div className="skills-heading">
+                    <h2>{slide.headingb}</h2>
+                    <ul>
+                      {slide.textb.map((item) => (
+                        <div key={item[0]}>
+                          <li
+                            style={{ marginTop: "10px", marginBottom: "5px" }}
+                          >
+                            {item[0]}
+                          </li>
+                          <div className="skill-container">
+                            <div
+                              style={{ width: item[1] }}
+                              className={`skill bar`}
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
               {slide.img && <img src={slide.img} alt="" />}
             </div>
