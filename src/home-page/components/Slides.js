@@ -36,9 +36,9 @@ const slides = [
   {
     id: "c",
     heading: "Online Certificates",
-    text: "More more more content",
+    text: "During my spare time I proactively invested in my future by completing courses, on platforms such as Coursera, Cisco, and Microsoft Learn, to earn industry-recognised certificates. These have helped to stengthen existing skills, learn new ones, and stand out in the job market.",
     link: "https://www.credly.com/users/ibrahim-maqsood",
-    linkText: "My Credly",
+    linkText: "View My Credly",
     img: "https://www.pearson.com/uk/content/dam/one-dot-com/one-dot-com/pearson-languages/en-gb/logos/credly-by-pearson-orange-logo.png",
   },
 ];

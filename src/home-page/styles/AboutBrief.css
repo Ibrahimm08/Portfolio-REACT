@@ -155,6 +155,10 @@
     background-color: var(--color3);
 }
 
+:has(.content.active.c) img {
+    margin-top: 200px;
+}
+
 
 :has(.content.active.c) button {
     --btn-color: var(--color4);

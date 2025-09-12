@@ -19,6 +19,8 @@
     height: 700px;
     width: 1070px;
     user-select: none;
+    border-radius: 10px;
+    box-shadow: 10px 15px 16px rgba(0, 0, 0, 0.384);
 }
 
 .envalope-design-back {
@@ -47,6 +49,7 @@
     clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 10%, 70% 10%, 80% 0);
     padding-left: 100px;
     background-color: var(--color2);
+    border-radius: 10px;
 }
 
 
