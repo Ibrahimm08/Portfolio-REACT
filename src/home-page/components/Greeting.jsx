@@ -15,8 +15,8 @@ const Greeting = () => {
               <div className="line" />
             </div>
             <h1>
-              Hello, I am Ibrahim Maqsood <br />I'm pursuing a career{" "}
-              <span>Software Development</span>
+              Hello, I am Ibrahim Maqsood <br />
+              I'm pursuing a career <span>Software Development</span>
             </h1>
           </div>
           <div className="description">
@@ -28,10 +28,13 @@ const Greeting = () => {
               Junior Software Assistant at BigBite.
             </p>
             <div className="socials">
-              <a href="https://github.com/Ibrahimm08">
+              <a target="_blank" href="https://github.com/Ibrahimm08">
                 <AiOutlineGithub />
               </a>
-              <a href="https://www.linkedin.com/in/ibrahimmaqsood/">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/ibrahimmaqsood/"
+              >
                 <AiOutlineLinkedin />
               </a>
             </div>

@@ -72,15 +72,36 @@
 
 .content p,
 .content ul {
-    font-size: large;
+    font-size: larger;
     list-style-type: none;
 }
+
+.content button {
+    padding: 1rem 0.5rem;
+    width: 200px;
+    font-size: 16px;
+    margin-top: 70px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--btn-color);
+    cursor: pointer;
+    transition: 0.8s;
+    outline: solid transparent;
+}
+
+.content button:hover {
+    filter: brightness(110%);
+    transform: translateY(-5px);
+    outline: white solid;
+}
+
 
 .skills-heading {
     position: absolute;
     text-align: left;
     width: 600px;
-    bottom: 80px;
+    height: 300px;
+    bottom: 130px;
     left: 45%;
 }
 
@@ -118,18 +139,34 @@
     background-color: var(--color1);
 }
 
+:has(.content.active.a) .content img {
+    height: 370px;
+}
+
+:has(.content.active.a) button {
+    --btn-color: var(--color2);
+}
+
+:has(.content.active.b) button {
+    --btn-color: var(--color1);
+}
+
 :has(.content.active.c) .display {
     background-color: var(--color3);
 }
 
-:has(.content.active.c) .content img {
-    height: unset;
+
+:has(.content.active.c) button {
+    --btn-color: var(--color4);
 }
 
+
 .content img {
+    margin-top: 10px;
     width: 550px;
-    height: 450px;
+    height: 300px;
     border-radius: 25px;
+    transition: 0.8s;
 }
 
 .content div {

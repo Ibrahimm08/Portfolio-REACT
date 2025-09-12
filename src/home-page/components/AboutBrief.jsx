@@ -90,6 +90,9 @@ const AboutBrief = () => {
               <div className="content-styling">
                 <h1>{slide.heading}</h1>
                 <p>{slide.text}</p>
+                <a target="_blank" href={slide.link}>
+                  <button>{slide.linkText}</button>
+                </a>
                 {slide.headingb && (
                   <div className="skills-heading">
                     <h2>{slide.headingb}</h2>
