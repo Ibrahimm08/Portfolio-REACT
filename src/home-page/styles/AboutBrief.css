@@ -1,5 +1,5 @@
 .about.container {
-    height: 2048px;
+    height: calc(1024px * 1.5);
     background: linear-gradient(white, var(--color5) 15%);
 }
 
@@ -80,7 +80,7 @@
     padding: 1rem 0.5rem;
     width: 200px;
     font-size: 16px;
-    margin-top: 70px;
+    margin-top: 80px;
     border-radius: 10px;
     border: none;
     background-color: var(--btn-color);
