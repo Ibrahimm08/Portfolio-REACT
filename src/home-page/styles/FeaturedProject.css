@@ -74,10 +74,9 @@
   background-color: black;
   transform: translate(0px, 95px);
   rotate: -30deg;
-  transition: 0.8s ease-in-out;
   scale: var(--ft-project-scale);
-  transition: scale 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition-delay: 0.7s;
+  transition: scale 0.4s 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+    transform 0.8s ease-in-out, background-color 0.8s;
 }
 
 .ft-project-arrow-cursor-cursor-inner {
@@ -101,7 +100,6 @@
 :has(.ft-project-arrow:hover) .ft-project-arrow-cursor {
   transform: translate(0px, 40px);
   background-color: var(--color3);
-  scale: 0.8;
 }
 
 .ft-project-desc {
