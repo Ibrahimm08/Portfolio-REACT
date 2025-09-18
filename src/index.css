@@ -1,26 +1,28 @@
 html {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    width: 100%;
-    height: 100%;
-    scrollbar-width: none;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 100%;
+  height: 100%;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 body {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
 
-/* Variables for theme */
-:root{
-    --color1: #EF476F;
-    --color2: #FFD166;
-    --color3: #06D6A0;
-    --color4: #118AB2;
-    --color5: #073B4C;
-
+:root {
+  /* Variables for theme */
+  --color1: #ef476f;
+  --color2: #ffd166;
+  --color3: #06d6a0;
+  --color4: #118ab2;
+  --color5: #073b4c;
+  /* Variable for popup effect in featured projects in home page */
+  --ft-project-scale: 0%;
 }
