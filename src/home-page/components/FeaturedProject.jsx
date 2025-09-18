@@ -1,6 +1,8 @@
 import "../styles/FeaturedProject.css";
-import image from "../images/arrow.svg";
 import { useEffect, useRef, useState } from "react";
+import image from "../images/arrow.svg";
+import imgBlackJack from "../images/BlackjackWeb.png";
+
 
 const FeaturedProject = () => {
   const [inView, setInView] = useState(false);
@@ -38,9 +40,16 @@ const FeaturedProject = () => {
   return (
     <div className="featured container">
       <div className="featured-projects">
-        <div className="ft-project projecta"></div>
-        <div className="ft-project projectb"></div>
-        <div className="ft-project projectc"></div>
+        <div className="ft-project projecta">
+          <img src={imgBlackJack} alt="" />
+          <figcaption>Blackjack 21</figcaption>
+        </div>
+        <div className="ft-project projectb">
+          <img src="" alt="" />
+        </div>
+        <div className="ft-project projectc">
+          <img src="" alt="" />
+        </div>
       </div>
       <div className="ft-project-arrow">
         <img src={image} alt="" />
@@ -52,7 +61,8 @@ const FeaturedProject = () => {
       <div ref={refference} className="ft-project-desc">
         <h1>Featured Projects</h1>
         <p>
-          Here are a few projects that I have completed during my time at BigBite, which I enjoyed developing and am proud of the outcome. 
+          Here are a few projects that I have completed during my time at
+          BigBite, which I enjoyed developing and am proud of the outcome.
         </p>
         <p>
           The 21 Blackjack project was created using HTML, CSS, and JavaScript.

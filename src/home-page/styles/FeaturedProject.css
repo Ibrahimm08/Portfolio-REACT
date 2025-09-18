@@ -10,13 +10,24 @@
   --modifier: 1;
   scale: var(--ft-project-scale);
   background-color: lightgrey;
-  border: solid;
   position: absolute;
   width: calc(650px * var(--modifier));
   height: calc(415px * var(--modifier));
   transition: scale 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
+.ft-project img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  mask: repeating-conic-gradient(
+    from 45deg at 30px 50%,
+    #0000,
+    #000 1deg 89deg,
+    #0000 90deg 180deg
+  ) -30px 50%/100% 60px;
+}
 .ft-project.projecta {
   top: 1%;
   rotate: 2deg;
@@ -114,5 +125,5 @@
 }
 
 .ft-project-desc p {
-    font-size: larger;
+  font-size: larger;
 }
