@@ -25,12 +25,12 @@ const FeaturedProject = () => {
     };
   }, []);
 
-  // In view play animation to summon featured projects 
+  // In view play animation to summon featured projects
   useEffect(() => {
     console.log(inView);
-    if (inView){
+    if (inView) {
       document.documentElement.style.setProperty("--ft-project-scale", "100%");
-    } else{
+    } else {
       document.documentElement.style.setProperty("--ft-project-scale", "0%");
     }
   }, [inView]);
@@ -50,8 +50,19 @@ const FeaturedProject = () => {
         </div>
       </div>
       <div ref={refference} className="ft-project-desc">
-        <h1>Header</h1>
-        <p>Content</p>
+        <h1>Featured Projects</h1>
+        <p>
+          Here are a few projects that I have completed during my time at BigBite, which I enjoyed developing and am proud of the outcome. 
+        </p>
+        <p>
+          The 21 Blackjack project was created using HTML, CSS, and JavaScript.
+          I started this project after being tasked with previous projects,
+          where I mainly practiced JS. This project was intitally intended to be
+          simple numbers and basic UI with no oponent, which I felt was too
+          bland and decided to make improvement by adding a dealer, ace choices,
+          ect...
+        </p>
+        <p>Add more text later</p>
       </div>
     </div>
   );

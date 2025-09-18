@@ -106,9 +106,13 @@
   position: absolute;
   background-color: var(--color1);
   border-radius: 25px;
-  padding: 1rem;
+  padding: 1rem 2.5rem;
   height: 450px;
   width: 750px;
   bottom: 5%;
   right: 5%;
+}
+
+.ft-project-desc p {
+    font-size: larger;
 }
