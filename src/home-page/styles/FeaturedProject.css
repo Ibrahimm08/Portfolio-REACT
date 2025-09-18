@@ -1,69 +1,106 @@
-.featured.container{
-    background-color: var(--color5);
+.featured.container {
+  background-color: var(--color5);
 }
 
-
-.featured-projects{
-    margin-left: 30px;
+.featured-projects {
+  margin-left: 30px;
 }
 
-.ft-project{
-    background-color: lightgrey;
-    border: solid;
-    position: absolute;
-    width: 650px;
-    height: 415px;
+.ft-project {
+  background-color: lightgrey;
+  border: solid;
+  position: absolute;
+  width: 650px;
+  height: 415px;
 }
 
-.ft-project.projecta{
-    rotate: 2deg;
+.ft-project.projecta {
+  top: 1%;
+  rotate: 2deg;
 }
 
-.ft-project.projectb{
-    right: 24%;
-    scale: 0.85;
-    rotate: -4deg;
+.ft-project.projectb {
+  right: 24%;
+  scale: 0.85;
+  rotate: -4deg;
 }
 
-.ft-project.projectc{
-    scale: 0.9;
-    top: 45%;
-    left: 12%;
-    rotate: 1deg;
+.ft-project.projectc {
+  scale: 0.9;
+  top: 45%;
+  left: 12%;
+  rotate: 1deg;
 }
 
-
-.ft-project-arrow{
-    display: flex;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    scale: 1.3;
-    top: 25%;
-    right: 7%;
-    height: 100px;
-    width: 400px;
+.ft-project-arrow {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  scale: 1.3;
+  top: 25%;
+  right: 7%;
+  height: 100px;
+  width: 400px;
+  cursor: pointer;
 }
 
 .ft-project-arrow img {
-    position: absolute;
-    align-self: end;
-    bottom: -40px;
+  position: absolute;
+  align-self: end;
+  bottom: -40px;
 }
 
 .ft-project-arrow p {
-    position: absolute;
-    rotate: -10deg;
+  position: absolute;
+  top: 25px;
+  left: 70px;
+  rotate: -12deg;
+  font-weight: 600;
+  font-size: larger;
 }
 
+.ft-project-arrow-cursor {
+  width: 40px;
+  aspect-ratio: 1;
+  clip-path: polygon(0% 100%, 20% 60%, 50% 0, 80% 60%, 100% 100%, 50% 80%);
+  background-color: black;
+  transform: translate(0px, 95px);
+  rotate: -30deg;
+  transition: 0.8s ease-in-out;
+}
 
-.ft-project-desc{
-    position: absolute;
-    background-color: var(--color1);
-    border-radius: 25px;
-    padding: 1rem;
-    height: 450px;
-    width: 750px;
-    bottom: 5%;
-    right: 5%;
+.ft-project-arrow-cursor-cursor-inner {
+  width: 40px;
+  aspect-ratio: 1;
+  position: absolute;
+  clip-path: polygon(
+    0% 0,
+    5% 100%,
+    50% 25%,
+    90% 90%,
+    50% 70%,
+    50% 70%,
+    -10% 100%,
+    100% 100%,
+    100% 0
+  );
+  background-color: white;
+}
+
+:has(.ft-project-arrow:hover) .ft-project-arrow-cursor{
+    transform: translate(0px, 40px);
+    background-color: var(--color3);
+    scale: 0.8;
+}
+
+.ft-project-desc {
+  position: absolute;
+  background-color: var(--color1);
+  border-radius: 25px;
+  padding: 1rem;
+  height: 450px;
+  width: 750px;
+  bottom: 5%;
+  right: 5%;
 }

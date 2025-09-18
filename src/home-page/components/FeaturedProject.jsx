@@ -11,8 +11,10 @@ const FeaturedProject = () => {
       </div>
       <div className="ft-project-arrow">
         <img src={image} alt="" />
-        <p>text</p>
-        <div className="ft-project-arrow-cursor"></div>
+        <p>See More Projects</p>
+        <div className="ft-project-arrow-cursor">
+          <div className="ft-project-arrow-cursor-cursor-inner"></div>
+        </div>
       </div>
       <div className="ft-project-desc">
         <h1>Header</h1>
