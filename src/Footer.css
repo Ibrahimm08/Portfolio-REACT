@@ -4,6 +4,7 @@ footer {
     height: 150px;
     width: 100%;
     background-color: var(--color3);
+    user-select: none;
 }
 
 .icons-footer {

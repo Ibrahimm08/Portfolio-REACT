@@ -29,7 +29,6 @@ const FeaturedProject = () => {
 
   // In view play animation to summon featured projects
   useEffect(() => {
-    console.log(inView);
     if (inView) {
       document.documentElement.style.setProperty("--ft-project-scale", "100%");
     } else {

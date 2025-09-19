@@ -57,10 +57,12 @@
 }
 
 @keyframes changeTxt {
-    20%,100%{
+
+    20%,
+    100% {
         color: rgba(255, 255, 255, 0.466);
     }
-    
+
 }
 
 .navbar ul a::before {

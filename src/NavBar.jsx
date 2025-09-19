@@ -15,14 +15,10 @@ const NavBar = ({ setPage }) => {
           </a>
         </p>
         <p>
-          <a data-text="About">
-            About
-          </a>
+          <a data-text="About">About</a>
         </p>
         <p>
-          <a data-text="Contact">
-            Contact
-          </a>
+          <a data-text="Contact">Contact</a>
         </p>
       </ul>
     </div>

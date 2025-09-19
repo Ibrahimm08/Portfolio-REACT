@@ -2,3 +2,10 @@
     min-height: 100%;
     margin-bottom: -150px;
 }
+
+/* Controls page size */
+
+.container {
+    position: relative;
+    height: 100vh;
+}

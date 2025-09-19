@@ -1,0 +1,39 @@
+.pt-bg{
+    position: absolute;
+    height: 85%;
+    width: 100%;
+    background-color: var(--color4);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 50%, 0 100%);
+}
+
+.pt-images{
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    width: 120%;
+    bottom: 150%;
+}
+
+.pt-images img {
+    clip-path: circle();
+}
+
+
+.pt-title{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color2);
+    font-size: 42px;
+    width: 70%;
+    height: 15%;
+    top: 42%;
+    left: 15%;
+    user-select: none;
+}
+
+.pt-title h1 {
+    font-weight: 600;
+    margin-bottom: 60px;
+}

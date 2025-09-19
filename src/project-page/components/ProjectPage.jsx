@@ -1,5 +1,9 @@
+import PageTitle from "./PageTitle";
+
 const ProjectPage = () => {
-  return <div></div>;
+  return <div>
+    <PageTitle/>
+  </div>;
 };
 
 export default ProjectPage;

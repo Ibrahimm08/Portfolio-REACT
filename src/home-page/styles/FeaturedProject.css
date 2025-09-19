@@ -34,7 +34,7 @@
 }
 
 .ft-project.projectb {
-  right: 24%;
+  left: 35%;
   rotate: -4deg;
   --modifier: 0.85;
   transition-delay: 0.2s;
