@@ -14,6 +14,7 @@
     animation: changeBg linear;
     animation-timeline: scroll();
     animation-range: 0% 100%;
+    user-select: none;
 }
 
 @keyframes changeBg {
@@ -52,6 +53,7 @@
     animation: changeTxt linear;
     animation-timeline: scroll();
     animation-range: 0 100%;
+    cursor: pointer;
 }
 
 @keyframes changeTxt {

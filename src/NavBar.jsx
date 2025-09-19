@@ -1,26 +1,26 @@
 import "./NavBar.css";
 
-const NavBar = () => {
+const NavBar = ({ setPage }) => {
   return (
     <div className="navbar">
       <ul>
         <p>
-          <a data-text="Home" href="">
+          <a data-text="Home" onClick={() => setPage(0)}>
             Home
           </a>
         </p>
         <p>
-          <a data-text="Projects" href="">
+          <a data-text="Projects" onClick={() => setPage(1)}>
             Projects
           </a>
         </p>
         <p>
-          <a data-text="About" href="">
+          <a data-text="About">
             About
           </a>
         </p>
         <p>
-          <a data-text="Contact" href="">
+          <a data-text="Contact">
             Contact
           </a>
         </p>
