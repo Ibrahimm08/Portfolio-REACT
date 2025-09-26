@@ -54,7 +54,7 @@
 .search-filter.btn:hover {
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
-    transition: 0.3s ease;
+    transition: 0.3s;
 }
 
 .search-filter.react {
@@ -67,4 +67,27 @@
     background-color: #e34c26;
     margin-left: var(--close-gap);
     clip-path: polygon(100% 0, 100% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 20px;
+    user-select: none;
+}
+
+.projects-card{
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.projects-card.expanded{
+    background: #d5f3f7;
+}
+
+.project-details{
+    margin-top: 1rem;
 }
