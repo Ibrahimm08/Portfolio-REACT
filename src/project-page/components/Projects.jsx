@@ -19,31 +19,50 @@ const Projects = () => {
   //     .catch((error) => console.error("Error fetching projects:"));
   // }, []);
 
+  
+  // get my repo
+  // get Bigbite repo
+  // combine
+  // Then do the topic adding
+  // ensure its mine
   useEffect(() => {
-    const projectsTopics = async () => {
+    const projectTopics = async () => {
       try {
-        const response = await fetch(
+        const userResponses = await fetch(
           "https://api.github.com/users/Ibrahimm08/repos"
         );
-        const repos = await response.json();
+        const userRepos = await userResponses.json();
 
-        const enrichedRepos = await Promise.all(
-          repos.map(async (repo) => {
+        const orgResponses = await fetch(
+          "https://api.github.com/orgs/BB-WEX/repos"
+        );
+        const orgRepos = await orgResponses.json();
+
+        const allRepos = [...userRepos, ...orgRepos];
+
+        const combinedRepos = await Promise.all(
+          allRepos.map(async (repo) => {
             const topicResponse = await fetch(
-              `https://api.github.com/repos/Ibrahimm08/${repo.name}/topics`
+              // owner.login to get org and user
+              `https://api.github.com/repos/${repo.owner.login}/${repo.name}/topics`,
+              {
+                headers: {
+                  Accept: "application/vnd.github.mercy-preview+json",
+                },
+              }
             );
             const topicData = await topicResponse.json();
             return { ...repo, topics: topicData.names };
           })
         );
 
-        setProjects(enrichedRepos);
+        setProjects(combinedRepos);
       } catch (error) {
-        console.error("Couldnt fetch topics");
+        console.error("Couldn't fetch repos");
       }
     };
 
-    projectsTopics();
+    projectTopics();
   }, []);
 
   const handleFilter = (chosenFilter) => {
