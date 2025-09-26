@@ -6,25 +6,34 @@ const Projects = () => {
   const [filter, setFilter] = useState("all");
   const [expanded, setExpanded] = useState(null);
 
-  // https://docs.github.com/en/rest/repos?apiVersion=2022-11-28
-  // Add fetching for projects from organization GitHub repos (Just like a game)
 
-  // Old fetch
-  // Use incase Topic fetching dont worke
+  // Add images using /images/${repo.name}.png
+  // Add topics to bigbite repos
 
-  // useEffect(() => {
-  //   fetch("https://api.github.com/users/Ibrahimm08/repos")
-  //     .then((response) => response.json())
-  //     .then((data) => setProjects(data))
-  //     .catch((error) => console.error("Error fetching projects:"));
-  // }, []);
+  // Risk of rate limit too many refreshes
+  // Set username to Ibrahimm08
+  const checkOwner = async (username, repos) => {
+    const contributed = [];
 
-  
-  // get my repo
-  // get Bigbite repo
-  // combine
-  // Then do the topic adding
-  // ensure its mine
+    for (const repo of repos) {
+      const response = await fetch(
+        `https://api.github.com/repos/${repo.owner.login}/${repo.name}/contributors`
+      );
+      const contributors = await response.json();
+      console.log("Contributors:", contributors);
+
+      // some returns true or false
+      const amContributer = contributors.some(
+        (user) => user.login.toLowerCase() === username.toLowerCase()
+      );
+
+      if (amContributer) {
+        contributed.push(repo);
+      }
+    }
+    return contributed;
+  };
+
   useEffect(() => {
     const projectTopics = async () => {
       try {
@@ -40,8 +49,11 @@ const Projects = () => {
 
         const allRepos = [...userRepos, ...orgRepos];
 
+        const checkedRepos = await checkOwner("Ibrahimm08", allRepos);
+        console.log("Checked Repos:", checkedRepos);
+
         const combinedRepos = await Promise.all(
-          allRepos.map(async (repo) => {
+          checkedRepos.map(async (repo) => {
             const topicResponse = await fetch(
               // owner.login to get org and user
               `https://api.github.com/repos/${repo.owner.login}/${repo.name}/topics`,
@@ -115,7 +127,7 @@ const Projects = () => {
               </div>
             )}
           </div>
-        ))}
+        )) || <h1 className="loading-msg">Loading...</h1>}
       </div>
     </div>
   );

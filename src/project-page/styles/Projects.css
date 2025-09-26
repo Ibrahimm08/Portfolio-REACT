@@ -99,3 +99,10 @@
 .project-details{
     margin-top: 1rem;
 }
+
+.loading-msg {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    grid-column: 1 / -1;
+}
