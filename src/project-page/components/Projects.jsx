@@ -124,7 +124,7 @@ const Projects = () => {
         <div className="search-filter html">
           <button
             className="search-filter btn"
-            onClick={() => handleFilter("HTML")}
+            onClick={() => handleFilter("html")}
           >
             HTML5
           </button>

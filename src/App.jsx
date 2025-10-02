@@ -11,6 +11,8 @@ function App() {
   const [selectedPage, setSelectedPage] = useState(pages[page]);
   useEffect(() => {
     setSelectedPage(pages[page]);
+    window.scrollTo({ top: 0, behavior: "instant" });
+    document.body.style.overflow = "";
   }, [page]);
   return (
     <div className="container">
